@@ -14,12 +14,13 @@ class HogwartsHouseTour::Houses
         arrhshs.each do |hh|
             new(hh[:name], hh[:mascot], hh[:head_of_house], hh[:house_ghost], hh[:founder], hh[:values], hh[:colors])
         end
-        
+
     end
 
 
     def initialize(name, mascot, head_of_house, house_ghost, founder, values, colors)
         @name, @mascot, @head_of_house, @house_ghost, @founder, @values, @colors = name, mascot, head_of_house, house_ghost, founder, values, colors
+        save
     end
 
     def save

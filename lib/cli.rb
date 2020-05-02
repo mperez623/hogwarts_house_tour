@@ -4,6 +4,8 @@ class HogwartsHouseTour::CLI
 
     def start
         student_welcome
+        get_house_data
+        # tour_loop
     end
 
 
@@ -14,11 +16,13 @@ class HogwartsHouseTour::CLI
         puts "\n\n\n"
     end
 
+    def get_house_data
+        HogwartsHouseTour::APIManager.get_house
+    end
 
-
-
-
-
+    # def tour_loop
+    #    menu
+    # end
 
 
 end
