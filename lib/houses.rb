@@ -12,7 +12,9 @@ class HogwartsHouseTour::Houses
 
     def self.create_house_from_api(arrhshs)
         arrhshs.each do |hh|
-            new(hh[:name], hh[:mascot], hh[:head_of_house], hh[:house_ghost], hh[:founder], hh[:values), hh[:colors]
+            new(hh[:name], hh[:mascot], hh[:head_of_house], hh[:house_ghost], hh[:founder], hh[:values], hh[:colors])
+        end
+        
     end
 
 
