@@ -4,7 +4,7 @@ class HogwartsHouseTour::Houses
 
     @@all =[]
 
-    attr_accessor :name, :mascot, :head_of_house, :house_ghost, :founder, :values, :colors
+    attr_accessor :name, :mascot, :head_of_house, :founder, :values, :colors
 
     def self.all
         @@all
@@ -12,14 +12,14 @@ class HogwartsHouseTour::Houses
 
     def self.create_house_from_api(arrhshs)
         arrhshs.each do |hh|
-            new(hh[:name], hh[:mascot], hh[:head_of_house], hh[:house_ghost], hh[:founder], hh[:values], hh[:colors])
+            new(hh[:name], hh[:mascot], hh[:headOfHouse], hh[:founder], hh[:values], hh[:colors])
         end
 
     end
 
 
-    def initialize(name, mascot, head_of_house, house_ghost, founder, values, colors)
-        @name, @mascot, @head_of_house, @house_ghost, @founder, @values, @colors = name, mascot, head_of_house, house_ghost, founder, values, colors
+    def initialize(name, mascot, head_of_house, founder, values, colors)
+        @name, @mascot, @head_of_house, @founder, @values, @colors = name, mascot, head_of_house, founder, values, colors
         save
     end
 

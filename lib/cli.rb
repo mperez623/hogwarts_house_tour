@@ -89,6 +89,7 @@ class HogwartsHouseTour::CLI
         gets
     end
 
+
     def ox_comma(array)
         if array.length == 1
             return array[0]
