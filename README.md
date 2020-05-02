@@ -1,8 +1,8 @@
-# HogwartsHouseTour
+# Hogwarts House Tour
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/hogwarts_house_tour`. To experiment with that code, run `bin/console` for an interactive prompt.
+    This CLI project takes place at the Hogwarts School of Witchcraft and Wizardry! It's purpose is to allow first years 
+    to learn more about the four Hogwarts houses. Traditionally, they would have their sorting ceremony take place before the Start-of-Term feast in the Great Hall. However, this time they are permitted to explore the house's history before The Sorting Hat has the final say. 
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
