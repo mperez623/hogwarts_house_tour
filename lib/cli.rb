@@ -73,4 +73,35 @@ class HogwartsHouseTour::CLI
         input.to_i.between?(1,HogwartsHouseTour::Houses.all.length)
     end
 
+    def display_chosen_house(i)
+        h = HogwartsHouseTour::Houses.all[i]
+        puts "You have selected the House of #{h.name}:"
+        puts "\n"
+        puts " ϟ #{h.name}'s mascot is the #{h.mascot.capitalize}."
+        print " ϟ Their house colors are: "
+        puts "#{self.ox_comma(h.colors)}."
+        print " ϟ #{h.name}'s values include: "
+        puts "#{self.ox_comma(h.values)}."
+        puts " ϟ The founder of the House of #{h.name} is #{h.founder}."
+        puts " ϟ #{h.name}'s current head of house is #{h.head_of_house}."
+        puts "\n\n"
+        puts "ϟ You may press any key to continue wandering.. ϟ"
+        gets
+    end
+
+    def ox_comma(array)
+        if array.length == 1
+            return array[0]
+          elsif array.length == 2
+            return array.join(" and ")
+          else 
+            
+            first_part = array[0..-2]
+            last_part = array[-1]
+            first_string = first_part.join(", ")
+            ending_string = ", and #{last_part}"
+            return first_string + ending_string 
+        end
+    end
+
 end

@@ -27,15 +27,5 @@ class HogwartsHouseTour::Houses
         @@all << self
     end
 
-    
-
-
-
-
-
-
-
-
-
 end
 
