@@ -35,6 +35,25 @@ class HogwartsHouseTour::CLI
         end
     end
 
+    def menu
+        display_tour_instructions
+        puts "\n"
+        display_all_houses
 
+    end
+
+    def display_all_houses
+        HogwartsHouseTour::Houses.all.each_with_index do |h, i|
+            puts "#{i+1} #{h.name}" 
+        end
+    end
+
+    def display_tour_instructions
+        puts "Later this evening the start-of-term banquet will be held in The Great Hall. Before you are seated, your sorting ceremony will take place. 
+        Until then you may explore the Houses of Hogwarts.."
+        puts "\n"
+        puts " ϟ Please select a House by number or input 'exit' to exit the program. ϟ"
+        puts "\n"
+    end
 
 end
