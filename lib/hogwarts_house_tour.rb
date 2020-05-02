@@ -1,4 +1,6 @@
 require 'httparty'
+require 'json'
+require 'pry'
 
 require_relative "hogwarts_house_tour/version"
 require_relative "./cli"
