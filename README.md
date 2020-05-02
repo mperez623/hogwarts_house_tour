@@ -20,9 +20,6 @@ Or install it yourself as:
 
     $ gem install hogwarts_house_tour
 
-## Usage
-
-TODO: Write usage instructions here
 
 ## Development
 
