@@ -56,4 +56,21 @@ class HogwartsHouseTour::CLI
         puts "\n"
     end
 
+    def get_house_choice
+        input = gets.strip
+
+        if input == "exit"
+            return "exit"
+        end
+
+        if !valid?(input)
+            return "invalid"
+        end
+        input.to_i-1 
+    end
+
+    def valid?(input)
+        input.to_i.between?(1,HogwartsHouseTour::Houses.all.length)
+    end
+
 end
